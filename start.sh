@@ -1,0 +1,1 @@
+docker run --name to-be-named --rm -v $PWD:/opt/to-be-named/ -w /opt/to-be-named -p 3000:3000 -d node:20-alpine npm run start
