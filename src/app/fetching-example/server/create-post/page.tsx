@@ -58,9 +58,9 @@ export default function Page() {
   return (
     <Main>
       <Container className="flex flex-col gap-5">
-        <Link href="/fetching-example/server" className="underline">
+        <a href="/fetching-example/server" className="underline">
           Back
-        </Link>
+        </a>
         <form
           className="space-y-3 text-black"
           onSubmit={handleSubmit(onSubmit)}

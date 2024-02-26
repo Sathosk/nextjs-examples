@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import Container from '@/components/Layout/Container'
 import Main from '@/components/Layout/Main'
 
@@ -12,9 +10,9 @@ export default function page() {
             <a href={'/middleware-example/home'}>Middleware Example</a>
           </li>
           <li className="text-blue-900 underline hover:text-blue-900/60">
-            <Link href={'/fetching-example/server'}>
+            <a href={'/fetching-example/server'}>
               Fetching and rendering Server Side
-            </Link>
+            </a>
           </li>
         </ul>
       </Container>
