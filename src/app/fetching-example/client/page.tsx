@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 
 import Container from '@/components/Layout/Container'
 import Main from '@/components/Layout/Main'
-import PostsServer from '@/components/Posts/PostsServer'
+import PostsClient from '@/components/Posts/PostsClient'
 import PostSkeleton from '@/components/Skeleton/PostSkeleton'
 import { Button } from '@/components/ui/button'
 
@@ -13,20 +13,14 @@ export default async function page() {
       <Container className="flex flex-col gap-10">
         <div className="flex justify-between">
           <h1 className="text-4xl font-bold">
-            Fetching and rendering server side
+            Fetching and rendering client side
           </h1>
           <Button asChild>
-            <a href="/fetching-example/server/create-post">Create Post</a>
+            <Link href="/fetching-example/client/create-post">Create Post</Link>
           </Button>
         </div>
 
-        <Suspense fallback={<PostSkeleton />}>
-          <PostsServer />
-        </Suspense>
-
-        <div className="text-2x1 bg-red-600 font-bold">
-          This is also rendered on Server
-        </div>
+        <PostsClient />
       </Container>
     </Main>
   )

@@ -14,6 +14,11 @@ export default function page() {
               Fetching and rendering Server Side
             </a>
           </li>
+          <li className="text-blue-900 underline hover:text-blue-900/60">
+            <a href={'/fetching-example/client'}>
+              Fetching and rendering Client Side
+            </a>
+          </li>
         </ul>
       </Container>
     </Main>

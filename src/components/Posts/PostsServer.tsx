@@ -1,6 +1,6 @@
 import { getPost } from '@/services/Posts'
 
-export default async function Posts() {
+export default async function PostsServer() {
   const data = await getPost()
 
   if (!data) return <div>Something went wrong.</div>

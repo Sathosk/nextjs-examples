@@ -1,5 +1,6 @@
 'use client'
 import { AxiosError } from 'axios'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -23,13 +24,11 @@ export default function Page() {
     try {
       const response = await createPost(data)
 
-      await revalidatePosts()
-
       toast({
         description: 'Your message has been sent.',
       })
 
-      router.push('/fetching-example/server')
+      router.push('/fetching-example/client')
 
       console.log(response)
     } catch (error) {
@@ -57,9 +56,9 @@ export default function Page() {
   return (
     <Main>
       <Container className="flex flex-col gap-5">
-        <a href="/fetching-example/server" className="underline">
+        <Link href="/fetching-example/client" className="underline">
           Back
-        </a>
+        </Link>
         <form
           className="space-y-3 text-black"
           onSubmit={handleSubmit(onSubmit)}
