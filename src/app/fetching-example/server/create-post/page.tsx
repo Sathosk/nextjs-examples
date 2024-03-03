@@ -91,7 +91,9 @@ export default function Page() {
               required
             />
           </div>
-          <Button type="submit">{isLoading ? <Spinner /> : 'Submit'}</Button>
+          <Button type="submit" disabled={isLoading}>
+            {isLoading ? <Spinner /> : 'Submit'}
+          </Button>
         </form>
       </Container>
     </Main>

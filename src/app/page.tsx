@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Container from '@/components/Layout/Container'
 import Main from '@/components/Layout/Main'
 
@@ -15,9 +17,12 @@ export default function page() {
             </a>
           </li>
           <li className="text-blue-900 underline hover:text-blue-900/60">
-            <a href={'/fetching-example/client'}>
+            <Link href="/fetching-example/client">
               Fetching and rendering Client Side
-            </a>
+            </Link>
+          </li>
+          <li className="text-blue-900 underline hover:text-blue-900/60">
+            <Link href="/layout-structure">Layout Structure</Link>
           </li>
         </ul>
       </Container>
